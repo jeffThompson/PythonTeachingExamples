@@ -9,6 +9,16 @@
 # but only stores unique items (ie: no repeats) called 'keys'. Each
 # key can have a 'value'.  In our case, we store words as the keys
 # and their count as values.
+#
+# Included is also a commented-out method for recording only words over
+# a certain length.  These words are called 'hexagraphs' and tend to
+# weed out common and connective words (and, there, etc) and include
+# meaningful words.
+
+# CHALLENGE:
+# 1. Load a text file and apply this process to the entire text
+# 2. Create separate dictionaries - how would you divide the text? How can you
+#    compare the dictionaries when done?
 
 
 # sentence to parse (the Gettysburg Address, actually)

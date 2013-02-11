@@ -1,8 +1,17 @@
 # COUNT INSTANCES OF LETTERS AND WORDS
 # Jeff Thompson | 2013 | www.jeffreythompson.org
 #
+# Counting words can show patterns and themes in texts; here we count
+# vowels, then words.  A more advanced example that counts only words
+# over a certain length can be found in the "CreateDictionary" example.
 #
+# CHALLENGE:
+# 1. Can you count the # of upper- and lower-case letters?
+# 2. Can you count two or more words that seem meaningful in the source and compare
+#    the results automatically? 
 
+
+# source sentence
 sentence = "One ring to rule them all, one ring to find them, one ring to bring them all and in the darkness bind them."
 
 # find all commas
@@ -34,5 +43,5 @@ print words
 ringCount = 0									# like vowels, count instances of word
 for word in words:								# go through all resulting words one-by-one
 	if word == 'ring':							# if the current word is 'ring'
-		ringCount += 1							# increment the count - same as above method but cleaner
+		ringCount += 1							# increment the count - a cleaner method than used above
 print 'count for "ring": ' + str(ringCount)
