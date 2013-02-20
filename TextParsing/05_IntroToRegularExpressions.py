@@ -40,7 +40,7 @@ t = re.findall("t", sentence)
 print t
 
 # find all words starting with 't'
-# \W = word boundary (means we don't grab in the middle of a word)
+# \W = start looking at the start of a word
 # t = letter t
 # .* = greedy match = keep grabbing!
 # ? = stop at first instance of next symbol
@@ -53,3 +53,16 @@ print tWords
 tWithoutSpaces = re.findall("\W(t.*?)\W", sentence)
 print tWithoutSpaces
 
+# find all words that start with vowels
+# [] means a list of values to match - here all the vowels upper- and lower-case
+vowelWords = re.findall("\W([AEIOUaeiuo].*?)\W", sentence)
+print vowelWords
+
+# find all words that end in 'e'
+endInE = re.findall("\w+e", sentence)
+print endInE
+
+# get any instance of "I" followed by a word
+# \s means a space
+iPlus = re.findall("(I\s.*?)\W", sentence)
+print iPlus

@@ -29,6 +29,8 @@ file = open(filename)
 for line in file:
 	numLines += 1										# increment the line count for the file
 	
+	line = line.lower()									# convert to lowercase so we match "He" and "he"
+	
 	male = re.findall('he|him|his|himself', line)		# the '|' means OR
 	maleCount += len(male)								# since findall returns a list, the length of that list is the # of matching pronouns!
 	
