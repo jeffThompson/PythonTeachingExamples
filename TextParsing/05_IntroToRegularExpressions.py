@@ -59,10 +59,14 @@ vowelWords = re.findall("\W([AEIOUaeiuo].*?)\W", sentence)
 print vowelWords
 
 # find all words that end in 'e'
-endInE = re.findall("\w+e", sentence)
+# \w = word
+# + = 
+# e = letter 'e'
+# \b = word boundary - ie: end of word
+endInE = re.findall("\w+e\b", sentence)
 print endInE
 
 # get any instance of "I" followed by a word
-# \s means a space
+# \s = white space, with greedy * match so any number of spaces, tabs, etc are found
 iPlus = re.findall("(I\s.*?)\W", sentence)
 print iPlus
