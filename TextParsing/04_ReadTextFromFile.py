@@ -1,50 +1,66 @@
-# READ TEXT FROM FILE
-# Jeff Thompson | 2013 | www.jeffreythompson.org
-#
-# Reading text from a file is very easy with Python (much easier than other
-# languages like Java) - here we go through a file line-by-line and count
-# the number of gendered pronouns in the text.
-#
-# Look in the 'SourceTexts' folder for more example source files.
-#
-# CHALLENGE:
-# 1. What else might you look for in the text?
-# 2. Can you load two text files and compare them automatically?
+
+'''
+READ FROM TEXT FILE
+Jeff Thompson | 2014 | www.jeffreythompson.org
+
+Reading text from a file is very easy with Python (much easier than other
+languages like Java). Here we go through a file line-by-line and count
+the number of gendered pronouns in the text (something that would be
+VERY time consuming and error-prone by hand).
+
+Look in the 'SourceTexts' folder for more example source files.
+'''
+
+import re								# load some extra code for easier pronoun matching
 
 
-import re										# load some extra code for 'regular expressions'
-
+# VARIABLES
 filename = "SourceTexts/TimeMachine.txt"		# file to load - use a full path or store locally
-lines = []										# empty list to store lines from the file
 
-numLines = 0									# variables to keep track of # lines, gender pronoun count
-maleCount = 0
-femaleCount = 0
-neutralCount = 0
+lines = []							# empty list to store lines from the file
+word_count = 0					# variables to keep track of # of words, gendered pronoun counts
+male_count = 0
+female_count = 0
+neutral_count = 0
 
-# open the file using the filename specified
-file = open(filename)
 
-# go through the file line-by-line...
-for line in file:
-	numLines += 1										# increment the line count for the file
+# READ FILE, COUNT PRONOUNS!
+with open(filename) as input:		# opens the file**
+
+	# go through file line-by-line using a for loop
+	for line in input:
+		line = line.lower()					# convert to lowercase so we match 'She' and 'she'
+
+		# get all pronouns from the line
+		# (since findall() returns a list, the length of that list is the # of matching pronouns!)
+		male = re.findall('he|him|his|himself', line)		# the '|' means OR
+		male_count += len(male)								
 	
-	line = line.lower()									# convert to lowercase so we match "He" and "he"
+		female = re.findall('she|her|hers|herself', line)
+		female_count += len(female)
 	
-	male = re.findall('he|him|his|himself', line)		# the '|' means OR
-	maleCount += len(male)								# since findall returns a list, the length of that list is the # of matching pronouns!
-	
-	female = re.findall('she|her|hers|herself', line)
-	femaleCount += len(female)
-	
-	neutral = re.findall('it|its|itself', line)
-	neutralCount += len(neutral)
+		neutral = re.findall('it|its|itself', line)
+		neutral_count += len(neutral)
 
-# remember to ALWAYS close the file when done
-file.close()
+		word_count += len(line.split())		# split line into words, add # of words to overall count
 
-# print the results!
-print "# of lines in file: " + str(numLines)
-print "Male:               " + str(maleCount)
-print "Female:             " + str(femaleCount)
-print "Neutral:            " + str(neutralCount)
+
+# PRINT THE RESULTS!
+print '# of words in file: ' + str(word_count)
+print 'Male pronouns:      ' + str(male_count)
+print 'Female pronouns:    ' + str(female_count)
+print 'Neutral pronouns:   ' + str(neutral_count)
+
+
+'''
+**OTHER WAY TO READ A FILE
+You may also see files read as two separate lines:
+
+input = open(filename)
+input.close()
+
+If you forget to close the file you're reading, it can
+cause problems, so the syntax used in this example is
+safer, especially for new programmers! :)
+'''
+

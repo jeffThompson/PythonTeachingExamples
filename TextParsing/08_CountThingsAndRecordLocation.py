@@ -1,15 +1,18 @@
-# COUNT THINGS AND RECORD LOCATION IN TEXT
-# Jeff Thompson | 2013 | www.jeffreythompson.org
-#
-# A more applied example - count the occurrences of things
-# like names in the text, but also keep track of their overall
-# location. This allows us to see a 'histogram' of where
-# characters or ideas occur and where they do not.
-#
-# CHALLENGE:
-# 1. What kinds of words would be interesting to count? Can you create
-#    a robust regular expression to catch all variations (capitalized, etc)?
-# 2. Can you compare the count of two or more terms? How might you visualize the results?
+
+'''
+COUNT THINGS AND RECORD LOCATION IN TEXT
+Jeff Thompson | 2014 | www.jeffreythompson.org
+
+A more applied example - count the occurrences of things
+like names in the text, but also keep track of their overall
+location. This allows us to see a 'histogram' of where
+characters or ideas occur and where they do not.
+
+CHALLENGE:
+1. What kinds of words would be interesting to count? Can you create
+   a robust regular expression to catch all variations (capitalized, etc)?
+2. Can you compare the count of two or more terms? How might you visualize the results?
+'''
 
 
 import re													# regex for matching words
