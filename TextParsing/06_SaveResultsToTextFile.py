@@ -1,26 +1,36 @@
-# SAVE RESULTS TO TEXT FILE
-# Jeff Thompson | 2013 | www.jeffreythompson.org
-#
-# Programming is very useful for "cleaning up" data, but if we
-# can't save the results into a file our efforts don't get us
-# too far, especially if parsing takes a long time.
-#
-# CHALLENGE:
-# 1. How might you strip a column of data from a CSV file?
-# 2. Can you build an automatic text-remixer that loads a source file
-#    and re-organizes it into something else?
 
-import re										# import regular expressions
+'''
+SAVE RESULTS TO TEXT FILE
+Jeff Thompson | 2014 | www.jeffreythompson.org
 
-inputFile = "SourceTexts/Sonnet51.txt"			# input and output files
-outputFile = "SonnetWithoutVowels.txt"
+Programming is very useful for 'cleaning up' data, but if we
+can't save the results into a file our efforts don't get us
+too far, especially if parsing takes a long time!
 
-source = open(inputFile)						# open source file
+This is basically the same as reading in a file, but we specify
+either 'w' to write to a file, or 'a' to append (add to).
 
-for line in source:								# read line-by-line
-	line = re.sub("[AEIOUaeiou]", "", line)		# replace all vowels with nothing!
-	with open(outputFile, "a") as file:			# open and append to file ("a" means add to end)
-		file.write(line)						# write data!
+The example below removes all vowels from an input text! :)
+'''
 
-source.close()									# be sure to close your input file!
-												# no need to close output file when using the above method
+# IMPORT REGEX
+import re
+
+
+# VARIABLES
+input_filename = 'SourceTexts/Sonnet51.txt'		# input filename
+output_filename = 'SonnetWithoutVowels.txt'		# output filename
+output_text = ''															# blank string to build output text
+
+
+# GO THROUGH INPUT TEXT, REMOVE VOWELS
+with open(input_filename) as input:
+	for line in input:
+		line = re.sub(r'[AEIOUaeiou]', '', line)	# replace vowels with... blanks!
+		output_text += line												# add new text to output
+
+
+# WRITE RESULTS TO FILE!
+with open(output_filename, 'w') as output:
+	output.write(output_text)
+
