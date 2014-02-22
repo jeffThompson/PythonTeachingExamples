@@ -46,14 +46,3 @@ for index, item in enumerate(baked_goods):		# get both position and item in list
 
 print baked_goods															# print the changed list
 
-
-
-
-
-
-
-
-
-
-
-

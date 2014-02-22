@@ -53,8 +53,8 @@ char_position = 0						# keep track of where we are in the text char-by-char
 page = 0										# which page does the character position translate to?
 pages = {}									# dictionary to keep track of times the term appears per page
 
-for word in words:
-	if word == term:
+for word in words:												# go through all the words...
+	if word == term:												# if the current word matches the one we're looking for, add or update dictionary
 		if page in pages.keys():
 			pages[page] += 1										# if page is already stored, update count
 		else:

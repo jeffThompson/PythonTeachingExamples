@@ -12,7 +12,9 @@ to be executed must be indented so Python can know
 what code is what. For example:
 
 if 0 < 1:					# if statement with colon
-	print 'true!'		# indented code executed if true
+	print 'true!'		# indented code is executed if true
+else:
+	print 'false!'
 
 OPERATORS
 >			greater than

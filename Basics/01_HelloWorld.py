@@ -14,7 +14,7 @@ a descriptive title, your name, and a way of getting
 in touch with you (email or web address). I like to
 include a year as well.
 
-Try running the script. If everything works, change
+Try running the script! If everything works, change
 the output text or add multiple 'print' commands.
 
 '''

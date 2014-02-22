@@ -99,3 +99,11 @@ print fibonacci[0]
 fibonacci[0] = 100
 print fibonacci
 
+
+# BOOLEAN
+# the simplest data type, just true or false!
+like_carrots = True			# true/false must be capitalized in Python
+like_mustard = False
+print 'I like carrots: ' + str(like_carrots)
+print 'I like mustard: ' + str(like_mustard)
+
