@@ -1,4 +1,3 @@
-
 '''
 FTP UPLOAD
 Jeff Thompson | 2014 | www.jeffreythompson.org
@@ -11,8 +10,8 @@ reasons (see Settings.py for the format).
 
 '''
 
-from ftplib import FTP 				# for uploading to server
-import os							# for basic file handling
+from ftplib import FTP 			# for uploading to server
+import os				# for basic file handling
 from settings.py import settings	# load FTP settings from file (for security reasons)
 
 
@@ -53,10 +52,10 @@ footer = '''
 ftp = FTP(ftp_address)			# create FTP object
 
 print '+ Connecting to server...'
-ftp.login(username, password)	# connect
+ftp.login(username, password)		# connect
 
 print '+ Changing to "' + directory + '"...'
-ftp.cwd(directory)				# change folders
+ftp.cwd(directory)			# change folders
 
 
 # BUILD HTML CONTENT
