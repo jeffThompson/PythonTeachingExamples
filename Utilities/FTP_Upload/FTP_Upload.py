@@ -14,11 +14,6 @@ reasons (see Settings.py for the format).
 from ftplib import FTP 				# for uploading to server
 import os							# for basic file handling
 from settings import settings		# load FTP settings from file (for security reasons)
-=======
-from ftplib import FTP 			# for uploading to server
-import os				# for basic file handling
-from settings.py import settings	# load FTP settings from file (for security reasons)
->>>>>>> 4c8e1bc589b00ea39940e6553ab16a0b0283a3fc
 
 
 # LOAD FTP SETTINGS FROM FILE
