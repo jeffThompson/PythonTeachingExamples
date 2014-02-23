@@ -10,9 +10,8 @@ reasons (see Settings.py for the format).
 
 '''
 
-<<<<<<< HEAD
-from ftplib import FTP 				# for uploading to server
-import os							# for basic file handling
+from ftplib import FTP 			# for uploading to server
+import os				# for basic file handling
 from settings import settings		# load FTP settings from file (for security reasons)
 
 
