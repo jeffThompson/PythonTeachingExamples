@@ -15,6 +15,8 @@ robustness :)
 RESOURCES:
 + This cheat-sheet is an excellent starting place when learning regex
 	- http://www.cheatography.com/davechild/cheat-sheets/regular-expressions/pdf
++ Also helpful:
+	- http://net.tutsplus.com/tutorials/other/8-regular-expressions-you-should-know
 
 CHALLENGE:
 1. Look through the regular expression documentation and/or the web-based model listed

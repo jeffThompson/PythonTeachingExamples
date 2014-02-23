@@ -1,3 +1,3 @@
-rank,city/state,2011_pop,2010_pop,change,land_area,pop_density,gps
+rank,city/state,2011_pop,2010_pop,change,land_area,pop_density,longitude,latitude
 1,"New York, New York",8244910,8175133,+0.85%,302.643 sq mi,27012 sq mi,40.6643N,73.9385W
 2,"Los Angeles, California",3819702,3792621,+0.71%,468.670 sq mi,8092 sq mi,34.0192N,118.4108W

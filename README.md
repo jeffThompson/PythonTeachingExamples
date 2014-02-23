@@ -26,11 +26,14 @@ Your script should run, either in the Terminal window (Text Wrangler) or in the 
 **BASICS**  
 Just a few simple scripts to get you started. Covers printing, data types, and basic math operators.
 
+**DATA CLEANUP**  
+A few examples of taking messy, real-world data and prepping it for use. (See also the `Text Processing > Introduction to Regular Expressions` example.)
+
 **TEXT PARSING**  
 Basic to intermediate examples on manipulating text.
 
 **UTILITIES**  
-Random assortment of (hopefully) useful scripts.
+Random assortment of (hopefully) useful scripts, mostly based on in-the-moment student questions.
 
 \- \- \-
 
