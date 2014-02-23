@@ -13,7 +13,7 @@ reasons (see Settings.py for the format).
 
 from ftplib import FTP 				# for uploading to server
 import os							# for basic file handling
-from settings.py import settings	# load FTP settings from file (for security reasons)
+from settings import settings		# load FTP settings from file (for security reasons)
 
 
 # LOAD FTP SETTINGS FROM FILE
@@ -41,6 +41,7 @@ header = '''
 	<title>''' + page_title + '''</title>
 </head>
 <body>
+
 '''
 
 footer = '''
@@ -62,7 +63,7 @@ ftp.cwd(directory)				# change folders
 # BUILD HTML CONTENT
 body = ''
 for i in range(100):
-	body += '	<p>This is paragraph <a href="' + str(i) + '.html">' + str(i) + '</a>.</p>'
+	body += '	<p>This is paragraph <a href="' + str(i) + '.html">' + str(i) + '</a>.</p>' + '\n'
 
 
 # SAVE HTML TO FILE
