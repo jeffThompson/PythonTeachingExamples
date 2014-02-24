@@ -17,24 +17,25 @@ import re
 
 
 # VARIABLES
-term = 'Frodo'																								# term to search for
+term = 'Frodo'													# term to search for
 input_filename = 'SourceTexts/LordOfTheRings_JRRTolkien.txt'	# file to load
-words = []																										# blank list for all words
-term_locations = []																						# blank list for locations of search term
+words = []														# blank list for all words
+term_locations = []												# blank list for locations of search term
 
 
 # LOAD ALL WORDS INTO MASTER LIST
 with open(input_filename) as input:
 	for line in input:
-		line = line.strip()									# removes newline (\n) characters
-		words.extend(line.split())					# splits the line into words, adds to the master list of words
+		line = line.strip()										# removes newline (\n) characters
+		words.extend(line.split())								# splits the line into words, adds to the master list of words
 
 print 'Total # of words: ' + str(len(words))
 
+
 # LOOK THROUGH WORD LIST, COUNT INSTANCES OF SEARCH TERM
-for index, word in enumerate(words):		# use enumerate() so we can get the location too
+for index, word in enumerate(words):							# use enumerate() so we can get the location too
 	if word == term:											# if the word matches our search term...
-		term_locations.append(index)				# ...append (add to) index the list of locations
+		term_locations.append(index)							# ...append (add to) index the list of locations
 
 print '# of times "' + term + '" appears: ' + str(len(term_locations))
 
@@ -48,24 +49,26 @@ print '# of times "' + term + '" appears: ' + str(len(term_locations))
 # of 25 lines/page, 65 characters/line = ~1625 characters/page
 # (via: http://answers.yahoo.com/question/index?qid=20080814062544AAJ01qr)
 
-chars_per_page = 25 * 65		# average # of characters per page (see above)
-char_position = 0						# keep track of where we are in the text char-by-char
-page = 0										# which page does the character position translate to?
+chars_per_page = 25 * 65					# average # of characters per page (see above)
+char_position = 0							# keep track of where we are in the text char-by-char
+page = 0									# which page does the character position translate to?
 pages = {}									# dictionary to keep track of times the term appears per page
 
-for word in words:												# go through all the words...
-	if word == term:												# if the current word matches the one we're looking for, add or update dictionary
+for word in words:							# go through all the words...
+	if word == term:						# if the current word matches the one we're looking for, add or update dictionary
 		if page in pages.keys():
-			pages[page] += 1										# if page is already stored, update count
+			pages[page] += 1 				# if page is already stored, update count
 		else:
-			pages[page] = 1											# if NOT stored, create entry and set its value to 1
+			pages[page] = 1					# if NOT stored, create entry and set its value to 1
 	
-	char_position += len(word) + 1					# update position (+1 = space after word!)
-	page = char_position / chars_per_page		# update page position
+	char_position += len(word) + 1			# update position (+1 = space after word!)
+	page = char_position / chars_per_page	# update page position
+
 
 # create a list of the pages where the search term appears, sorted by how often the term appears
 sorted_page_count = sorted(pages, key=pages.get)		# returns a list in ascending (low-high) order
-most_page = sorted_page_count[-1]										# -1 gets last element in list!
-most_page_count = pages[most_page]									# how many times does term appear on this page?
+most_page = sorted_page_count[-1]						# -1 gets last element in list!
+most_page_count = pages[most_page]						# how many times does term appear on this page?
+
 print '"' + term + '" appears most on page ' + str(most_page) + ' (' + str(most_page_count) + ' times)'
 
