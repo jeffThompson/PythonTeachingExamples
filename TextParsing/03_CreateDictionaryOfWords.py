@@ -24,18 +24,18 @@ sentence = '''Fourscore and seven years ago our fathers brought forth on this co
 
 
 # EXTRACT WORDS INTO LIST
-sentence = sentence.lower()									# convert all letters to lowercase (so words like 'And' and 'and' match)
+sentence = sentence.lower()						# convert all letters to lowercase (so words like 'And' and 'and' match)
 sentence = sentence.replace(',.?!-', ' ')		# replace all punctuation with spaces (for better splitting)
-words = sentence.split()										# split into a list
+words = sentence.split()						# split into a list
 
 
 # GO THROUGH ALL WORDS, ADD TO DICTIONARY!
-dict = {}											# create blank dictionary
-for word in words:						# go through all words in the list
+dict = {}										# create blank dictionary
+for word in words:								# go through all words in the list
 	if word in dict.keys():
-		dict[word] += 1						# if word is already stored, increment count by 1
+		dict[word] += 1							# if word is already stored, increment count by 1
 	else:
-		dict[word] = 1						# if NOT stored, create entry and set its value to 1
+		dict[word] = 1							# if NOT stored, create entry and set its value to 1
 
 # another version, storing only words above a certain length
 # this method tends to weed out common words like 'the' and 'and'
@@ -53,7 +53,7 @@ for word in words:
 
 
 # HOW MANY UNIQUE WORDS ARE IN THE SENTENCE?
-num_unique_words = len(dict)													# just like a list!
+num_unique_words = len(dict)							# just like a list!
 print '# of unique words: ' + str(num_unique_words)		# print the result
 
 
@@ -66,9 +66,9 @@ print '# of times the word "nation" appears: ' + str(nation_count)
 # WHAT IS THE MOST COMMON WORD?
 # note there are some faster ways to do this, but the code is much less readable
 # (for a fancier example, see: http://stackoverflow.com/a/12343826/1167783)
-keys = list(dict.keys())														# make a list of the keys (words)
-values = list(dict.values())												# make a list of the values (word counts)
-max_count = max(values)															# what is the maximum word count?
+keys = list(dict.keys())								# make a list of the keys (words)
+values = list(dict.values())							# make a list of the values (word counts)
+max_count = max(values)									# what is the maximum word count?
 most_common_word = keys[values.index(max_count)]		# get the word by the value
 
 print 'Most common word: "' + str(most_common_word) + '"'
