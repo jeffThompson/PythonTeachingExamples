@@ -70,6 +70,7 @@ for word in words:													# go through all resulting words one-by-one
 		ring_count += 1													# increment the count
 print '# of rings: ' + str(ring_count)			# the results!
 
+
 # note our method isn't perfect - if 'ring' is next to a comma or period, it
 # will be listed at 'ring,' instead and will not match - we'll come back to
 # this problem in the 'IntroToRegularExpressions' example.

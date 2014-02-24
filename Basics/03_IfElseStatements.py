@@ -17,8 +17,8 @@ else:
 	print 'false!'
 
 OPERATORS
->			greater than
-<			less than
+>		greater than
+<		less than
 >=		greater than or equal to
 <=		less than or equal to
 ==		equal to (note, this is different than a single =)
@@ -32,8 +32,9 @@ num_peanuts = 30
 num_almonds = 120
 
 if num_peanuts > num_almonds:		# note the colon
-	print 'more peanuts!'					# note the indentation!
-else:														# next statement is un-indented
+	print 'more peanuts!'			# note the indentation!
+	print 'hooray!'
+else:								# next statement is un-indented
 	print 'more almonds!'
 
 
@@ -43,6 +44,8 @@ another_name = 'Jeff'
 
 if my_name == another_name:
 	print 'we both have the same name!'
+
+# note, we don't need an 'else'
 
 
 # MULTIPLE CONDITIONS

@@ -21,8 +21,8 @@ names, you can use _ to make names more readable.
 # or floating-point (decimals, like 3.14)
 # numbers can be positive or negative too!
 
-year = 2014								# example of an integer
-fav_num = 3								# concise is sometimes better, so long as it's understandable...
+year = 2014						# example of an integer
+fav_num = 3						# concise is sometimes better, so long as it's understandable...
 approximate_pi = 3.14			# example of a float
 
 # you can print numbers onscreen like this
@@ -41,7 +41,7 @@ double_favorite_number = fav_num * fav_num
 print double_favorite_number
 
 # sometimes we want to update a variable
-fav_num += 1							# this adds 1 to the variable...
+fav_num += 1					# this adds 1 to the variable...
 fav_num = fav_num + 1			# ...which is the same as this!
 
 

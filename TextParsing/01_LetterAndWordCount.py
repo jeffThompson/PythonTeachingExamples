@@ -31,7 +31,9 @@ print words										# notice 'words' is a list of all the words in the string!
 split_at_commas = sentence.split(',')
 print split_at_commas
 
+
+
 # how many words are there? use len() again to get the number of items in the list!
-numWords = len(words)
-print '# words: ' + str(numWords)
+num_words = len(words)
+print '# words: ' + str(num_words)
 
