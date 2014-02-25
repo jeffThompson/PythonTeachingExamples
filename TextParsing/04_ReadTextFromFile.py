@@ -11,25 +11,25 @@ VERY time consuming and error-prone by hand).
 Look in the 'SourceTexts' folder for more example source files.
 '''
 
-import re								# load some extra code for easier pronoun matching
+import re										# load some extra code for easier pronoun matching
 
 
 # VARIABLES
 filename = "SourceTexts/TimeMachine.txt"		# file to load - use a full path or store locally
 
-lines = []							# empty list to store lines from the file
-word_count = 0					# variables to keep track of # of words, gendered pronoun counts
+lines = []										# empty list to store lines from the file
+word_count = 0									# variables to keep track of # of words, gendered pronoun counts
 male_count = 0
 female_count = 0
 neutral_count = 0
 
 
 # READ FILE, COUNT PRONOUNS!
-with open(filename) as input:		# opens the file**
+with open(filename) as input:		# opens the file (see note at bottom)**
 
 	# go through file line-by-line using a for loop
 	for line in input:
-		line = line.lower()					# convert to lowercase so we match 'She' and 'she'
+		line = line.lower()			# convert to lowercase so we match 'She' and 'she'
 
 		# get all pronouns from the line
 		# (since findall() returns a list, the length of that list is the # of matching pronouns!)
@@ -42,7 +42,7 @@ with open(filename) as input:		# opens the file**
 		neutral = re.findall('it|its|itself', line)
 		neutral_count += len(neutral)
 
-		word_count += len(line.split())		# split line into words, add # of words to overall count
+		word_count += len(line.split())						# split line into words, add # of words to overall count
 
 
 # PRINT THE RESULTS!
@@ -59,7 +59,7 @@ You may also see files read as two separate lines:
 input = open(filename)
 input.close()
 
-If you forget to close the file you're reading, it can
+BUT: if you forget to close the file you're reading, it can
 cause problems, so the syntax used in this example is
 safer, especially for new programmers! :)
 '''

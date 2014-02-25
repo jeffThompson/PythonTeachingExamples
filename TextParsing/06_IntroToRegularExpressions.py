@@ -55,7 +55,7 @@ sentence = sentence.lower()
 
 # FIND ALL INSTANCES OF THE LETTER 'T'
 t = re.findall('t', sentence)		# returns a list of T's
-print t													# could also use len(t) to get the # of T's
+print t								# could also use len(t) to get the # of T's
 
 
 # FIND ALL WORDS STARTING WITH THE LETTER 'T'

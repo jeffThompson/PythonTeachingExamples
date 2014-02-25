@@ -48,7 +48,7 @@ for word in words:
 			dict[word] = 1
 '''
 
-# PRINT THE DICTIONARY (don't do this for a really long text!)_
+# PRINT THE DICTIONARY (don't do this for a really long text!)
 # print dict
 
 

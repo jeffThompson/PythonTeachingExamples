@@ -40,7 +40,7 @@ if ',' in sentence:
 # FIND ALL COMMAS
 # go through all the letters in the sentence, print every time we find a comma
 for character in sentence:		# goes through the string character-by-character
-	if character == ',':				# if the current character is a comma
+	if character == ',':		# if the current character is a comma
 		print 'comma!'
 
 
@@ -48,29 +48,31 @@ for character in sentence:		# goes through the string character-by-character
 
 
 # COUNT ALL VOWELS
-vowelCount = 0															# variable to store the count
-sentence = sentence.lower()									# convert sentence to lowercase (so that 'A' and 'a' both match)
-for c in sentence:													# iterate characters
-	if c in 'aeiou':													# is the current character a vowel?
-		vowelCount += 1													# increment the count!
-print '# of vowels: ' + str(vowelCount)			# ...and print the results
+vowel_count = 0									# variable to store the count
+sentence = sentence.lower()						# convert sentence to lowercase (so that 'A' and 'a' both match)
+for c in sentence:								# iterate characters
+	if c in 'aeiou':							# is the current character a vowel?
+		vowel_count += 1						# increment the count 
+												# += is the same as vowel_count = vowel_count + 1
+print '# of vowels: ' + str(vowel_count)		# ...and print the results
 
 
 # COUNT WORDS
 # look for instances of a specific word in the sentence
 
 # to do this, we first split sentence into a list of words
-words = sentence.split()		# split at spaces into a list
-print words									# print the list of words
+words = sentence.split()			# split at spaces into a list
+print words							# print the list of words
 
 # count instances of the word 'ring'
-ring_count = 0															# like vowels, count instances of word
-for word in words:													# go through all resulting words one-by-one
-	if word == 'ring':												# if the current word is 'ring'
-		ring_count += 1													# increment the count
+ring_count = 0									# like vowels, count instances of word
+for word in words:								# go through all resulting words one-by-one
+	if word == 'ring':							# if the current word is 'ring'
+		ring_count += 1							# increment the count
 print '# of rings: ' + str(ring_count)			# the results!
 
 
 # note our method isn't perfect - if 'ring' is next to a comma or period, it
 # will be listed at 'ring,' instead and will not match - we'll come back to
 # this problem in the 'IntroToRegularExpressions' example.
+

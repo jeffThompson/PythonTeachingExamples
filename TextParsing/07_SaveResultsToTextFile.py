@@ -20,14 +20,14 @@ import re
 # VARIABLES
 input_filename = 'SourceTexts/Sonnet51.txt'		# input filename
 output_filename = 'SonnetWithoutVowels.txt'		# output filename
-output_text = ''															# blank string to build output text
+output_text = ''								# blank string to build output text
 
 
 # GO THROUGH INPUT TEXT, REMOVE VOWELS
 with open(input_filename) as input:
 	for line in input:
 		line = re.sub(r'[AEIOUaeiou]', '', line)	# replace vowels with... blanks!
-		output_text += line												# add new text to output
+		output_text += line							# add new text to output
 
 
 # WRITE RESULTS TO FILE!
