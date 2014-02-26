@@ -9,8 +9,8 @@ We'll be writing code in a text editor - I recommend one of the following:
 +	Sublime Text (free with paid upgrade, [download here](http://www.sublimetext.com/2))
 
 Python is a scripting language that is very powerful, but easy to get started with. It should come pre-installed on your computer! To check, open your command line:  
-+	Mac users: Applications > Utilities > Terminal  
-+	PC users: Start > All Programs > Accessories > Command Prompt
++	Mac users: `Applications > Utilities > Terminal`  
++	PC users: `Start > All Programs > Accessories > Command Prompt`
 
 To see if Python is set up, type `python` into the window - you should get a bunch of information on which version you have set up.
 
