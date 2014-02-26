@@ -18,8 +18,8 @@ To see if Python is set up, type `python` into the window - you should get a bun
 All Python scripts (programs) will be written in your text editor and saved with the `.py` extension. See the `Basics` folder for some simple examples.
 
 Once written, you can run your script using the following:  
-+	Text Wrangler: #! > Run in Terminal...  
-+	Sublime Text: Tools > Build... (or command/control B)
++	Text Wrangler: `#! > Run in Terminal...`  
++	Sublime Text: `Tools > Build... (or command/control B)`  
 
 Your script should run, either in the Terminal window (Text Wrangler) or in the built-in console (Sublime Text).
 
